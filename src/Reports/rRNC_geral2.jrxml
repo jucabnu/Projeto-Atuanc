@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rRNC_geral2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9397858a-ad92-4120-850a-80f0fa96aeab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="setor" class="java.lang.String"/>
+	<field name="quantidade" class="java.lang.Integer"/>
+	<field name="percentual" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="24" width="561" height="30" uuid="1e63ddc3-c028-49f0-87a2-c69bf8660f4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Relatório Geral de RNC]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="4" width="110" height="33" uuid="6c6278c3-b00b-4305-9fff-2d034e73c816"/>
+				<imageExpression><![CDATA["C:/Users/Juliano/OneDrive/IFC/TCC TADS/AtuaNC2/src/images/logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="0" width="100" height="20" uuid="a9819e2d-be6b-46d0-bad7-a0922deb9cb9"/>
+				<text><![CDATA[Setor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="100" height="20" uuid="9ed28d62-77ef-4ade-9889-49f8d5bcd4cd"/>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="380" y="2" width="100" height="18" forecolor="#FFFFFF" uuid="0f4c45c1-edb6-4c05-ae44-3d0a108aa85b"/>
+				<text><![CDATA[Percentual]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="0" width="100" height="20" uuid="ace1fa0d-a86b-4e87-afcc-67d20324685f"/>
+				<textFieldExpression><![CDATA[$F{setor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="20" uuid="507c4c74-62d9-495b-8b0e-fcb3c63bdeff"/>
+				<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="74e397f4-5186-475d-896c-0a382bbe7cc9"/>
+				<textFieldExpression><![CDATA[$F{percentual}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="7" y="30" width="100" height="20" uuid="61c9a679-b514-46a6-93d4-7e6d08d9ac35"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="110" y="30" width="100" height="20" uuid="bcbc3fa2-a75d-4905-b84e-38af241d2a7f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="20" width="100" height="30" uuid="8658cbdd-7fe0-45b3-ad95-3952ddc07782"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="450" y="20" width="100" height="30" uuid="f4551bf7-77e3-4384-9be0-c47e4012ba53"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

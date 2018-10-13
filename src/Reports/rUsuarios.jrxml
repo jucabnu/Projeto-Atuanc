@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rUsuarios" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="73fffd1a-bdb8-456a-b252-3b1578d82b62">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codusu" class="java.lang.Integer"/>
+	<field name="nomusu" class="java.lang.String"/>
+	<field name="emausu" class="java.lang.String"/>
+	<field name="logusu" class="java.lang.String"/>
+	<field name="tipusu" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="24" width="561" height="30" uuid="c5a97082-3ff4-4f2f-a9f6-7d19660bc5c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Relatórios de Usuários]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="4" width="110" height="33" uuid="ff82997a-7a7e-4a6b-bdcf-781e8093e4de"/>
+				<imageExpression><![CDATA["C:/Users/Juliano/OneDrive/IFC/TCC TADS/AtuaNC2/src/images/logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="60" height="15" uuid="e8dbb745-c76f-475f-8030-14c94145700f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="130" height="15" uuid="23a547ee-dc23-45ab-84e0-52af23ba0d5d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="170" height="15" uuid="9325cc75-cef4-47a7-96ce-6c14824181a9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="15" uuid="37cead3c-da4d-4003-af72-5e17f969866d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Login]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="70" height="15" uuid="16d9844a-6237-4a9e-8e0a-41d18f3266ed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="60" height="15" uuid="ad92255e-844f-4c74-bd03-e5df55f351a5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{codusu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="130" height="15" uuid="949ac611-c49d-4a0a-8ad7-305a7f748106"/>
+				<textFieldExpression><![CDATA[$F{nomusu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="170" height="15" uuid="e4edceb3-7ade-4ba4-b060-4cec48599635"/>
+				<textFieldExpression><![CDATA[$F{emausu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="15" uuid="04cb55e4-775f-4498-81a6-0975708c4333"/>
+				<textFieldExpression><![CDATA[$F{logusu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="70" height="15" uuid="432c7c63-158f-4bdf-ab54-f5356bf37422">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipusu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="350" y="30" width="100" height="30" uuid="17716419-4ec4-4cdd-8ce5-1a4a3abeadde"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="450" y="30" width="100" height="30" uuid="0920a982-a776-4a3b-b6a7-9d9490ae78b6"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="10" y="40" width="100" height="20" uuid="e83abb02-2d5e-41ae-aff3-e47a0ab982fa"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="110" y="40" width="100" height="21" uuid="11780fcf-542a-4285-b31c-ca0a313d27af"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
